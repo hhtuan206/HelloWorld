@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".IntentInDSActivity">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal" android:layout_margin="5dp" android:padding="10dp">
+        <TableLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:stretchColumns="1"
+                     android:shrinkColumns="0">
+            <TableRow>
+                <TextView
+                        android:id="@+id/TextView"
+                        android:text="Họ Tên: "
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:id="@+id/TextView1"
+                        android:text="Giới tính:"
+                        android:layout_gravity="center|left"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:orientation="vertical">
+                    <RadioGroup android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <RadioButton android:layout_width="match_parent" android:layout_height="match_parent"
+                                     android:id="@+id/cbNam" android:text="Nam"/>
+                        <RadioButton android:layout_width="match_parent" android:layout_height="match_parent"
+                                     android:id="@+id/cbNu" android:text="Nữ"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:id="@+id/TextView2"
+                        android:layout_span="1"
+                        android:text="Quê quán: "
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                <EditText
+                        android:id="@+id/editAddress"
+                        android:layout_span="32"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"/>
+            </TableRow>
+
+                <LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:gravity="center">
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Thêm mới" android:id="@+id/btnAdd" />
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="In DS" android:id="@+id/btnPrint" />
+                </LinearLayout>
+
+
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

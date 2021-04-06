@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        tools:context=".DssvActivity">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="Thông tin sinh viên" android:gravity="center" android:id="@+id/TextView1"
+              android:textSize="25sp"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_below="@id/TextView1" android:id="@+id/editName" android:hint="Nhập họ tên"/>
+
+    <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center"
+                android:id="@+id/RadioGroup" android:layout_below="@id/editName">
+        <RadioButton android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Nam"
+                     android:padding="10dp" android:layout_margin="25dp" android:id="@+id/rdNam"/>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Nữ"
+                     android:padding="10dp" android:layout_margin="25dp" android:id="@+id/rdNu"/>
+    </RadioGroup>
+    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_below="@id/RadioGroup" android:layout_centerInParent="true"  android:text="Văn bằng 2"
+              android:id="@+id/cbVb"/>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/cbVb" android:id="@+id/imgAva" android:src="@mipmap/ic_launcher" android:layout_margin="10dp"/>
+    <EditText android:layout_width="250dp" android:layout_height="wrap_content" android:layout_toRightOf="@id/imgAva" android:inputType="textPersonName" android:layout_below="@id/cbVb" android:layout_margin="20dp" android:id="@+id/editDesc"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/imgAva"  android:text="On" android:id="@+id/btnOn"/>
+    <Button android:layout_width="wrap_content"  android:layout_marginTop="50dp" android:layout_height="wrap_content" android:layout_below="@id/btnOn" android:text="Xem TT" android:id="@+id/btmXem"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:layout_toRightOf="@id/btmXem" android:layout_below="@id/btnOn" android:layout_marginLeft="75dp" android:text="Huỷ" android:id="@+id/btnHuy"/>
+</RelativeLayout>
