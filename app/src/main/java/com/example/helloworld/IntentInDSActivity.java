@@ -1,14 +1,12 @@
 package com.example.helloworld;
 
 import android.content.Intent;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class IntentInDSActivity extends AppCompatActivity {
 
@@ -19,7 +17,7 @@ public class IntentInDSActivity extends AppCompatActivity {
     private RadioButton rbNam;
     private RadioButton rbNu;
     private String sex;
-    private ArrayList<String> listUs = new ArrayList<>();
+    private final ArrayList<String> listUs = new ArrayList<>();
 
 
     @Override

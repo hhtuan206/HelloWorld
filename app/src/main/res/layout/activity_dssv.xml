@@ -24,9 +24,9 @@
     <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:layout_below="@id/RadioGroup" android:layout_centerInParent="true"  android:text="Văn bằng 2"
               android:id="@+id/cbVb"/>
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/cbVb" android:id="@+id/imgAva" android:src="@mipmap/ic_launcher" android:layout_margin="10dp"/>
-    <EditText android:layout_width="250dp" android:layout_height="wrap_content" android:layout_toRightOf="@id/imgAva" android:inputType="textPersonName" android:layout_below="@id/cbVb" android:layout_margin="20dp" android:id="@+id/editDesc"/>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/imgAva"  android:text="On" android:id="@+id/btnOn"/>
-    <Button android:layout_width="wrap_content"  android:layout_marginTop="50dp" android:layout_height="wrap_content" android:layout_below="@id/btnOn" android:text="Xem TT" android:id="@+id/btmXem"/>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:layout_toRightOf="@id/btmXem" android:layout_below="@id/btnOn" android:layout_marginLeft="75dp" android:text="Huỷ" android:id="@+id/btnHuy"/>
+    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:layout_below="@id/cbVb" android:scaleType="fitXY" android:id="@+id/imgAva" android:src="@mipmap/ic_launcher" android:layout_margin="10dp"/>
+    <EditText android:layout_width="250dp" android:layout_height="wrap_content" android:layout_toRightOf="@id/imgAva" android:inputType="textPersonName" android:layout_below="@id/cbVb" android:layout_margin="20dp" android:id="@+id/editDesc" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/imgAva" android:layout_marginLeft="10dp"  android:text="On" android:id="@+id/btnPickImg"/>
+    <Button android:layout_width="wrap_content"  android:layout_marginTop="50dp" android:layout_height="wrap_content"  android:layout_marginLeft="10dp" android:layout_below="@id/btnPickImg" android:text="Xem TT" android:id="@+id/btnXem"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp"   android:layout_toRightOf="@id/btnXem" android:layout_below="@id/btnPickImg" android:layout_marginLeft="75dp" android:text="Huỷ" android:id="@+id/btnHuy"/>
 </RelativeLayout>

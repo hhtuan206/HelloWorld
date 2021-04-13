@@ -2,13 +2,13 @@ package com.example.helloworld;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -16,6 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editUsername;
     private EditText editPassword;
     private CheckBox cbRemember;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,42 +28,42 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editUsername.getText().toString().equals("admin") && editPassword.getText().toString().equals("123")){
-                    if(cbRemember.isChecked()){
-                        editor.putString("Username",editUsername.getText().toString());
-                        editor.putString("Password",editPassword.getText().toString());
-                        editor.putBoolean("Remember",true);
+                if (editUsername.getText().toString().equals("admin") && editPassword.getText().toString().equals("123")) {
+                    if (cbRemember.isChecked()) {
+                        editor.putString("Username", editUsername.getText().toString());
+                        editor.putString("Password", editPassword.getText().toString());
+                        editor.putBoolean("Remember", true);
                         editor.commit();
-                    }else{
+                    } else {
                         editor.clear();
                     }
-
                     Intent intent = new Intent(LoginActivity.this, LoginSuccessActivity.class);
                     startActivity(intent);
-                }else{
+                } else {
                     Toast.makeText(LoginActivity.this, "Sai pass or user", Toast.LENGTH_SHORT).show();
+                    editor.clear();
                 }
             }
         });
 
     }
 
-    protected  void onResume(){
+    protected void onResume() {
         super.onResume();
         restorePre();
     }
 
-    void restorePre(){
-        SharedPreferences pre = getSharedPreferences("UsInfo",MODE_PRIVATE);
+    void restorePre() {
+        SharedPreferences pre = getSharedPreferences("UsInfo", MODE_PRIVATE);
         boolean remember = pre.getBoolean("Remember", false);
-        if(remember){
-            editUsername.setText(pre.getString("Username",""));
-            editPassword.setText(pre.getString("Password",""));
+        if (remember) {
+            editUsername.setText(pre.getString("Username", ""));
+            editPassword.setText(pre.getString("Password", ""));
         }
         cbRemember.setChecked(remember);
     }
 
-    void getViews(){
+    void getViews() {
         btnLogin = findViewById(R.id.btnLogin);
         editUsername = findViewById(R.id.editUsername);
         editPassword = findViewById(R.id.editPassword);
